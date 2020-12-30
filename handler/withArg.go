@@ -10,6 +10,7 @@ import (
 
 func WithArgHandler(writer http.ResponseWriter, request *http.Request) {
 	value := getAuth()
+	writer.Header().Set("Access-Control-Allow-Origin", "*")
 	fmt.Fprintf(writer, string(value))
 }
 
