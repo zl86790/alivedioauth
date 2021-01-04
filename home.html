@@ -19,15 +19,16 @@
         $(document).ready(function () {
             htmlobj = $.ajax({ url: "http://alipoc.dev.awspactera.com:8000/", async: false });
             token = htmlobj.responseText
+            var player = new Aliplayer({
+                id: "J_prismPlayer",
+                autoplay: true,
+                width: "640px",
+                height: "480px",
+                vid: "e06498bc828946fdb99213a8794a2bae",
+                playauth: token,
+                cover: ''
+            });
         });
-        var player = new Aliplayer({
-            id: "J_prismPlayer",
-            autoplay: true,
-            width: "1920px",
-            height: "1280px",
-            vid: "e06498bc828946fdb99213a8794a2bae",
-            playauth: token,
-            cover: ''
-        });
+
     </script>
 </body>
